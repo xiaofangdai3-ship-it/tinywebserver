@@ -1,0 +1,14 @@
+# 编译产物
+obj/
+server
+*.o
+*.out
+
+# IDE
+.vscode/
+
+# 日志
+log/
+
+# 其他
+""

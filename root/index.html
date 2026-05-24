@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TinyWebServer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 60px 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            margin: 5px;
+        }
+        
+        .info {
+            margin-top: 30px;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .info h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .info ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            color: #555;
+        }
+        
+        .info li:last-child {
+            border-bottom: none;
+        }
+        
+        .info li::before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 TinyWebServer</h1>
+        <p class="subtitle">一个轻量级高并发 HTTP 服务器</p>
+        
+        <div>
+            <span class="badge">C++11</span>
+            <span class="badge">epoll</span>
+            <span class="badge">线程池</span>
+            <span class="badge">Reactor</span>
+        </div>
+        
+        <div class="info">
+            <h3>技术特性</h3>
+            <ul>
+                <li>基于 epoll 的 I/O 多路复用（ET 边缘触发模式）</li>
+                <li>线程池处理并发请求（默认 8 个工作线程）</li>
+                <li>Reactor 事件处理模式</li>
+                <li>支持 HTTP/1.1 长连接（Keep-Alive）</li>
+                <li>内存映射（mmap）高效传输静态文件</li>
+                <li>支持 GET 请求，可扩展 POST</li>
+            </ul>
+        </div>
+        
+        <p class="footer">Server is running successfully! 🎉</p>
+    </div>
+</body>
+</html>
